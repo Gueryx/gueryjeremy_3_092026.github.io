@@ -240,6 +240,10 @@ Nav li:hover {
     margin-left: 10px;
 }
 
+.cardMarseille:hover {
+    cursor: pointer;
+}
+
 /************************************************** Populaires ***********/
 .populaires {
     width: 32%;
