@@ -117,6 +117,7 @@ Nav li:hover {
     width: 100%;
 }
 
+/* à l'écriture */
 .search-bar input[type="text"] {
     border: none;
     outline: none;
@@ -125,6 +126,7 @@ Nav li:hover {
     font-size: 16px;
 }
 
+/* bouton recherche */
 .search-bar input[type="submit"] {
     border: none;
     border-radius: 0 20px 20px 0;
@@ -135,6 +137,7 @@ Nav li:hover {
     font-weight: bold;
 }
 
+/* bouton recherche au survol */
 .search-bar input[type="submit"]:hover {
     cursor: pointer;
     background-color: #0051c7;
@@ -288,6 +291,42 @@ Nav li:hover {
     margin-bottom: 5px;
 }
 
+/**************************************************** Activités à Marseille ********/
+.activites {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin-bottom: 50px;
+}
+
+.activites h2 {
+    margin-top: 70px;
+    display: flex;
+    justify-content: left;
+    width: 100%;
+}
+
+.activites .card {
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.activites img {
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    margin: -5px;
+    height: 400px;
+}
+
+.activites h4 {
+    padding-left: 15px;
+}
+
+
+
 /**************************************************** Footer ****************/
 .footer {
     background-color: #f2f2f2;
@@ -333,19 +372,6 @@ Nav li:hover {
     text-decoration: underline;
 }
 
-/* Responsivité pour mobile (optionnel) */
-@media (max-width: 768px) {
-    .footer {
-        flex-direction: column;
-        gap: 30px;
-        padding: 30px 20px;
-    }
-
-    .footer-column {
-        max-width: 100%;
-    }
-}
-
 
 
 /* Le code ci-dessous correspond à la version responsive uniquement */
@@ -357,7 +383,7 @@ Nav li:hover {
         flex-direction: column;
     }
 
-    .hebergements {
+    .hebergementsMarseille {
         width: 100%;
     }
 
@@ -383,9 +409,35 @@ Nav li:hover {
     .populaires-cards .card-subtitle {
         font-size: 13px;
     }
+
+    .activites {
+        gap: 10px;
+    }
+
+    .activites .card {
+        display: flex;
+
+        width: 200px;
+        height: 320px;
+    }
+
+    .activites img {
+        height: 250px;
+    }
+
 }
 
 /* Small devices (phones, less than 768px) */
 @media (max-width: 767.98px) {
-    /* ... */
+
+
+    .footer {
+        flex-direction: column;
+        gap: 30px;
+        padding: 30px 20px;
+    }
+
+    .footer-column {
+        max-width: 100%;
+    }
 }
