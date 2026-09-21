@@ -30,7 +30,9 @@
 
         <!-- Barre de navigation -->
         <nav>
-            <img src="./images/logo/Booki.png" alt="Logo Booki">
+            <div>
+                <img src="./images/logo/Booki.png" alt="Logo Booki">
+            </div>
             <ul>
                 <li><a href="#">Hébergements</a></li>
                 <li><a href="#">Activités</a></li>
@@ -50,13 +52,19 @@
                 <i class="fa-solid fa-location-dot"></i>
                 <search>
                     <input type="text" placeholder="Rechercher...">
-                    <input type="submit" value="Rechercher">
+                    <button class="icon-search">
+                        <input type="submit" value="Rechercher">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                    </button>
                 </search>
             </section>
 
             <!-- les filtres -->
             <section class="filters">
-                <h2>Filtres</h2>
+
+                <div class="filtersTitle">
+                    <h2>Filtres</h2>
+                </div>
 
                 <div class="underFilters">
                     <i class="fa-solid fa-money-bill-wave"></i>
@@ -74,6 +82,7 @@
                     <i class="fa-solid fa-fire"></i>
                     <p><strong>Nos pépites</strong></p>
                 </div>
+
             </section>
 
             <!-- Info -->
@@ -310,12 +319,16 @@
                         </a>
                     </div>
                 </section>
+
+
             </div>
 
             <!-- Activités à Marseille -->
             <section class="activites">
 
-                <h2>Activités à Marseille</h2>
+                <div>
+                    <h2>Activités à Marseille</h2>
+                </div>
 
                 <!-- Article 1 -->
                 <a href="#">

@@ -94,6 +94,12 @@ Nav li:hover {
 }
 
 /**************************************************** Search Bar ***********/
+
+/* Ne pas afficher l'icone recherche sur PC*/
+.search-bar .icon-search i {
+    display: none;
+}
+
 .search-bar {
     margin: 30px 0px 30px 0px;
     display: flex;
@@ -102,7 +108,8 @@ Nav li:hover {
     border-radius: 20px;
     width: 300px;
     box-sizing: border-box;
-    background-color: #F2F2F2
+
+
 }
 
 .search-bar i {
@@ -110,11 +117,13 @@ Nav li:hover {
     display: flex;
     align-items: center;
     padding: 18px;
+    background-color: #F2F2F2;
+    border-radius: 15px 0px 0px 15px;
+
 }
 
 .search-bar search {
     display: flex;
-    width: 100%;
 }
 
 /* à l'écriture */
@@ -124,6 +133,8 @@ Nav li:hover {
     padding: 0px 0px 0px 15px;
     font-weight: bold;
     font-size: 16px;
+    border-top: 1px solid #F2F2F2;
+    border-bottom: 1px solid #F2F2F2;
 }
 
 /* bouton recherche */
@@ -145,14 +156,12 @@ Nav li:hover {
 
 /**************************************************** Filters ***********/
 .filters {
-    width: 750px;
+    width: 800px;
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap;
     margin: 15px 15px 15px 0px;
-}
-
-.filters h2 {
-    margin-right: 15px;
+    gap: 15px;
 }
 
 .underFilters {
@@ -300,10 +309,8 @@ Nav li:hover {
     margin-bottom: 50px;
 }
 
-.activites h2 {
-    margin-top: 70px;
-    display: flex;
-    justify-content: left;
+.activites .activite-title {
+    margin-top: 50px;
     width: 100%;
 }
 
@@ -374,11 +381,23 @@ Nav li:hover {
 
 
 
-/* Le code ci-dessous correspond à la version responsive uniquement */
+/***************************************** Le code ci-dessous correspond à la version responsive uniquement */
 
 /****** Media queries ***********/
 /* Medium devices (tablets, less/equal than 1024px) */
 @media (max-width: 1024px) {
+    .filters {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 15px;
+        width: 100%;
+    }
+
+    /* Titre filtre par dessus qui prends toute la ligne */
+    .filters .filtersTitle {
+        width: 100%;
+    }
+
     .hebergements-and-populaires {
         flex-direction: column;
     }
@@ -411,12 +430,12 @@ Nav li:hover {
     }
 
     .activites {
+        width: 100%;
         gap: 10px;
     }
 
     .activites .card {
         display: flex;
-
         width: 200px;
         height: 320px;
     }
@@ -429,12 +448,138 @@ Nav li:hover {
 
 /* Small devices (phones, less than 768px) */
 @media (max-width: 767.98px) {
+    .main-container {
+        width: 100%;
+        max-width: 100%;
+        margin: 0;
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    /***** inversion pour les hebergements */
+    .hebergements-and-populaires {
+        flex-direction: column-reverse;
+    }
+
+    .filters .filtersTitle,
+    header .header-title,
+    header p {
+        padding-left: 10px;
+    }
+
+    Nav {
+        flex-wrap: wrap;
+    }
+
+    /* img */
+    Nav div {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+
+    Nav ul {
+        width: 100%;
+        padding: 0px;
+        gap: 0px;
+    }
+
+    Nav li {
+        width: 100%;
+        flex: 1;
+        text-align: center;
+        list-style: none;
+        border-top: none;
+        border-bottom: 2px solid #F2F2F2;
+        transition: 0.2s;
+    }
+
+    Nav li:hover {
+        color: #0065FC;
+        border-top: none;
+        border-bottom: 2px solid #0065FC;
+    }
+
+    /* Masquer le texte "Rechercher" sur mobile */
+    .search-bar .icon-search input {
+        display: none;
+    }
+
+    /* Afficher l'icône loupe sur mobile (elle était masquée dans votre code actuel) */
+    .search-bar .icon-search i {
+        display: inline-block;
+        color: white;
+        background-color: #0065FC;
+        border-radius: 15px;
+        box-shadow: 5px 5px 5px 5px rgba(92, 92, 92, 0.5);
+    }
+
+    .filters {
+        width: 100%;
+    }
+
+    .filters .underFilters {
+        width: 125px;
+    }
+
+    .hebergements-and-populaires section {
+        border-radius: 0px;
+    }
+
+    .populaires-cards {
+        display: block;
+    }
+
+    .cardMarseille {
+        display: block;
+        width: 100%;
+    }
+
+    .hebergements-and-populaires .hebergementsMarseille {
+        background-color: white;
+    }
+
+    .hebergementsMarseille img {
+        width: 100%;
+        height: 110px;
+        border-top-left-radius: 20px;
+        border-top-right-radius: 20px;
+    }
+
+    .activites {
+        /* Les éléments sont les uns sous les autres */
+        flex-direction: column;
+        /* Centre horizontalement */
+        align-items: center;
+        /* Centre verticalement */
+        justify-content: center;
+        gap: 0px;
+
+
+    }
+
+    .activites .activite-title {
+        width: 300px;
+    }
+
+    .activites .card {
+        width: 300px;
+        height: 200px;
+        margin: 10px;
+    }
+
+    .activites img {
+        width: auto;
+        height: 150px;
+    }
 
 
     .footer {
         flex-direction: column;
         gap: 30px;
         padding: 30px 20px;
+        margin-left: 0px;
+        box-sizing: border-box;
     }
 
     .footer-column {
