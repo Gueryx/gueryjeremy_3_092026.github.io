@@ -382,8 +382,8 @@ Nav li:hover {
 
 /***************************************** Le code ci-dessous correspond à la version responsive uniquement */
 
-/****** Media queries ***********/
-/* Medium devices (tablets, less/equal than 1024px) */
+/************************************************************ Media queries ***********/
+/************************************************************ Medium devices (tablets, less/equal than 1024px) */
 @media (max-width: 1024px) {
     .filters {
         display: flex;
@@ -456,7 +456,7 @@ Nav li:hover {
 
 }
 
-/* Small devices (phones, less than 768px) */
+/********************************************************* Small devices (phones, less than 768px) */
 @media (max-width: 767.98px) {
     .main-container {
         width: 100%;
@@ -569,6 +569,7 @@ Nav li:hover {
     .cardMarseille {
         display: block;
         width: 100%;
+        padding-top: 20px;
     }
 
     .hebergements-and-populaires .hebergementsMarseille {
