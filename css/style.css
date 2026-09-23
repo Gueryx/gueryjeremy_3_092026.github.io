@@ -258,7 +258,6 @@ Nav li:hover {
 }
 
 .populaires-title {
-
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -335,7 +334,7 @@ Nav li:hover {
     height: 400px;
 }
 
-.activites h4 {
+.activites h3 {
     padding-left: 15px;
 }
 
@@ -461,6 +460,10 @@ Nav li:hover {
         display: flex;
         width: 180px;
         height: 320px;
+    }
+
+    .activites h3 {
+        font-size: 16px;
     }
 
     .activites img {
