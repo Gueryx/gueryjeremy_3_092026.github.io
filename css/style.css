@@ -165,7 +165,7 @@ Nav li:hover {
     gap: 15px;
 }
 
-.underFilters {
+.under-filters {
     display: flex;
     align-items: center;
     padding: 0px 20px 0px 20px;
@@ -174,11 +174,11 @@ Nav li:hover {
     border-radius: 30px;
 }
 
-.underFilters i {
+.under-filters i {
     font-size: 20px;
 }
 
-.underFilters:hover {
+.under-filters:hover {
     cursor: pointer;
     background-color: #DEEBFF;
 }
@@ -213,42 +213,42 @@ Nav li:hover {
 }
 
 /*************************************************** Hebergements Marseille ***********/
-.hebergementsMarseille {
+.hebergements-marseille {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
     width: 65%;
 }
 
-.hebergementsMarseille-title {
+.hebergements-marseille-title {
     width: 100%;
     margin-top: -20px;
 }
 
-.cardMarseille {
+.card-marseille {
     width: 32%;
     height: 230px;
     border-radius: 30px;
 }
 
 
-.hebergementsMarseille img {
+.hebergements-marseille img {
     width: 100%;
     height: 100px;
     border-top-left-radius: 20px;
     border-top-right-radius: 20px;
 }
 
-.cardMarseille h3,
-.cardMarseille p {
+.card-marseille h3,
+.card-marseille p {
     padding: 0px 0px 0px 10px;
 }
 
-.cardMarseille .card-rating {
+.card-marseille .card-rating {
     margin-left: 10px;
 }
 
-.cardMarseille .card:hover {
+.card-marseille .card:hover {
     box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
 }
 
@@ -302,7 +302,7 @@ Nav li:hover {
 }
 
 /**************************************************** Activités à Marseille ********/
-.activites {
+.activity {
     width: 100%;
     display: flex;
     flex-wrap: wrap;
@@ -311,30 +311,30 @@ Nav li:hover {
     padding-left: 30px;
 }
 
-.activites .activite-title {
+.activity .activity-title {
     margin-top: 50px;
     width: 100%;
 }
 
-.activites .card {
+.activity .card {
     width: 300px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
 }
 
-.activites .card:hover {
+.activity .card:hover {
     box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
 }
 
-.activites img {
+.activity img {
     border-top-left-radius: 20px;
     border-top-right-radius: 20px;
     margin: -5px;
     height: 400px;
 }
 
-.activites h3 {
+.activity h3 {
     padding-left: 15px;
 }
 
@@ -399,11 +399,11 @@ Nav li:hover {
     }
 
     /* Titre filtre par dessus qui prends toute la ligne */
-    .filters .filtersTitle {
+    .filters .filters-title {
         width: 100%;
     }
 
-    .underFilters {
+    .under-filters {
         display: flex;
         align-items: center;
         padding: 0px 20px 0px 20px;
@@ -416,7 +416,7 @@ Nav li:hover {
         flex-direction: column;
     }
 
-    .hebergementsMarseille {
+    .hebergements-marseille {
         width: 100%;
     }
 
@@ -443,7 +443,7 @@ Nav li:hover {
         font-size: 13px;
     }
 
-    .activites {
+    .activity {
         width: 100%;
         gap: 10px;
         display: flex;
@@ -452,21 +452,21 @@ Nav li:hover {
         padding-left: 0px;
     }
 
-    .activites .activite-title {
+    .activity .activity-title {
         padding-left: 30px;
     }
 
-    .activites .card {
+    .activity .card {
         display: flex;
         width: 180px;
         height: 320px;
     }
 
-    .activites h3 {
+    .activity h3 {
         font-size: 16px;
     }
 
-    .activites img {
+    .activity img {
         height: 250px;
     }
 
@@ -482,7 +482,7 @@ Nav li:hover {
         padding-right: 0;
     }
 
-    .filters .filtersTitle,
+    .filters .filters-title,
     header .header-title,
     header p {
         padding-left: 10px;
@@ -564,7 +564,7 @@ Nav li:hover {
         padding: 20px 20px;
     }
 
-    .filters .underFilters {
+    .filters .under-filters {
         width: 125px;
     }
 
@@ -582,24 +582,24 @@ Nav li:hover {
         display: block;
     }
 
-    .cardMarseille {
+    .card-marseille {
         display: block;
         width: 100%;
         padding-top: 20px;
     }
 
-    .hebergements-and-populaires .hebergementsMarseille {
+    .hebergements-and-populaires .hebergements-marseille {
         background-color: white;
     }
 
-    .hebergementsMarseille img {
+    .hebergements-marseille img {
         width: 100%;
         height: 110px;
         border-top-left-radius: 20px;
         border-top-right-radius: 20px;
     }
 
-    .activites {
+    .activity {
         /* Les éléments sont les uns sous les autres */
         flex-direction: column;
         /* Centre horizontalement */
@@ -609,18 +609,18 @@ Nav li:hover {
         gap: 0px;
     }
 
-    .activites .activite-title {
+    .activity .activity-title {
         width: 300px;
         padding-left: 0px;
     }
 
-    .activites .card {
+    .activity .card {
         width: 300px;
         height: 200px;
         margin: 10px;
     }
 
-    .activites img {
+    .activity img {
         width: auto;
         height: 150px;
     }
