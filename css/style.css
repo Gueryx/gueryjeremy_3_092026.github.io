@@ -58,48 +58,56 @@ a {
     color: var(--main-bg-color)
 }
 
-/**************************************************** Navigation ***********/
-Nav {
+/* =====================================================================================================
+   BARRE DE NAVIGATION (NAVBAR)
+   ===================================================================================================== */
+
+/* Conteneur principal de la navigation : disposition en ligne, espacée et centrée verticalement */
+nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 15px 0px 15px 0px;
+    padding: 15px 0;
+    /* Simplifié de "15px 0px 15px 0px" */
 }
 
-/* Style du logo ***********/
-Nav img {
+
+/* Style et dimensions du logo */
+nav img {
     width: 100px;
     height: 30px;
 }
 
-/* Nav disposition***********/
-Nav ul {
+/* Liste des liens de navigation : suppression des puces et espacement horizontal */
+nav ul {
     list-style: none;
     display: flex;
     gap: 30px;
 }
 
-/* Style des li ***********/
-Nav li {
-    list-style: none;
+/* Style des éléments de la liste (liens du menu) */
+nav li {
     padding: 10px 15px;
     border-top: 2px solid transparent;
     transition: 0.2s;
 }
 
-/* Style des li au survol ***********/
-Nav li:hover {
+/* Effet au survol des éléments du menu : changement de couleur et apparition de la bordure du haut */
+nav li:hover {
     color: #0065FC;
     border-top: 2px solid #0065FC;
 }
 
-/**************************************************** Search Bar ***********/
+/* =====================================================================================================
+   BARRE DE RECHERCHE (Search-bar)
+   ===================================================================================================== */
 
-/* Ne pas afficher l'icone recherche sur PC*/
+/* Masque l'icône de recherche sur PC (desktop) */
 .search-bar .icon-search .icon-loop {
     display: none;
 }
 
+/* Conteneur global de la barre de recherche */
 .search-bar {
     margin: 30px 0px 30px 0px;
     display: flex;
@@ -110,24 +118,28 @@ Nav li:hover {
     box-sizing: border-box;
 }
 
+/* Bloc de localisation (icône épingle à gauche) */
 .search-bar .localisation {
     display: flex;
     align-items: center;
     padding: 18px;
     background-color: #F2F2F2;
     border-radius: 15px 0px 0px 15px;
+    /* Coins arrondis uniquement à gauche */
 }
 
+/* Style de l'icône de localisation */
 .search-bar .localisation i {
     color: black;
     font-size: 15px;
 }
 
+/* Bloc contenant les éléments de recherche (input et bouton) */
 .search-bar search {
     display: flex;
 }
 
-/* à l'écriture */
+/* Champ de texte de la recherche */
 .search-bar input[type="text"] {
     border: none;
     outline: none;
@@ -138,7 +150,7 @@ Nav li:hover {
     border-bottom: 1px solid #F2F2F2;
 }
 
-/* bouton recherche */
+/* Bouton de soumission/recherche */
 .search-bar input[type="submit"] {
     border: none;
     border-radius: 0 20px 20px 0;
@@ -149,22 +161,28 @@ Nav li:hover {
     font-weight: bold;
 }
 
-/* bouton recherche au survol */
+/* Effet au survol du bouton de recherche */
 .search-bar input[type="submit"]:hover {
     cursor: pointer;
     background-color: #0051c7;
 }
 
-/**************************************************** Filters ***********/
+/* =====================================================================================================
+   LES FILTRES (Filters)
+   ===================================================================================================== */
+
+/* Conteneur global de la section des filtres */
 .filters {
     width: 800px;
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
+    /* Permet aux filtres de passer à la ligne */
     margin: 15px 15px 15px 0px;
     gap: 15px;
 }
 
+/* Style de chaque bouton / pastille de filtre individuelle */
 .under-filters {
     display: flex;
     align-items: center;
@@ -174,16 +192,22 @@ Nav li:hover {
     border-radius: 30px;
 }
 
+/* Style des icônes à l'intérieur des filtres */
 .under-filters i {
     font-size: 20px;
 }
 
+/* Effet au survol d'un filtre : changement du curseur et de la couleur de fond */
 .under-filters:hover {
     cursor: pointer;
     background-color: #DEEBFF;
 }
 
-/**************************************************** Info ***********/
+/* =====================================================================================================
+   INFORMATION (Info)
+   ===================================================================================================== */
+
+/* Conteneur global du bloc d'information */
 .info {
     display: flex;
     align-items: center;
@@ -191,12 +215,14 @@ Nav li:hover {
     margin: 15px 0;
 }
 
+/* Style de l'icône (le "i" entouré) à l'intérieur du bloc info */
 .info i {
     font-size: 15px;
     margin-right: 15px;
     border: solid 1px #f2f2f2;
     padding: 5px 10px 5px 10px;
     border-radius: 100px;
+    /* Rend la bordure totalement ronde/ovale */
 }
 
 /**************************************************** Hebergements And Populaires ***********/
@@ -212,7 +238,11 @@ Nav li:hover {
     box-sizing: border-box;
 }
 
-/*************************************************** Hebergements Marseille ***********/
+/* =====================================================================================================
+   HEBERGEMENTS MARSEILLE (Hebergements Marseille)
+   ===================================================================================================== */
+
+/* Conteneur global de la section des hébergements : disposition en grille flex sur 65% de la largeur */
 .hebergements-marseille {
     display: flex;
     justify-content: space-between;
@@ -220,18 +250,21 @@ Nav li:hover {
     width: 65%;
 }
 
+/* Titre de la section (prend toute la largeur pour se positionner au-dessus des cartes) */
 .hebergements-marseille-title {
     width: 100%;
     margin-top: -20px;
 }
 
+/* Style individuel d'une carte d'hébergement à Marseille */
 .card-marseille {
     width: 32%;
+    /* Permet de placer 3 cartes par ligne */
     height: 230px;
     border-radius: 30px;
 }
 
-
+/* Style des images à l'intérieur de la section hébergements */
 .hebergements-marseille img {
     width: 100%;
     height: 100px;
@@ -239,39 +272,50 @@ Nav li:hover {
     border-top-right-radius: 20px;
 }
 
+/* Espacement interne (padding à gauche) pour le titre (h3) et le texte (p) des cartes */
 .card-marseille h3,
 .card-marseille p {
     padding: 0px 0px 0px 10px;
 }
 
+/* Décalage de la note (étoiles) par rapport au bord gauche */
 .card-marseille .card-rating {
     margin-left: 10px;
 }
 
+/* Effet d'ombrage au survol des cartes */
 .card-marseille .card:hover {
     box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
 }
 
-/************************************************** Populaires ***********/
+/* =====================================================================================================
+   HEBERGEMENTS POPULAIRES (Populaires)
+   ===================================================================================================== */
+
+/* Conteneur global de la section des hébergements populaires (occupe 32% de la largeur) */
 .populaires {
     width: 32%;
 }
 
+/* En-tête de la section (titre et icône de tendance) : alignés et espacés horizontalement */
 .populaires-title {
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
+/* Style des cartes à l'intérieur de la section populaires : disposition horizontale (flex) et espacement */
 .populaires-cards .card {
     display: flex;
     margin-top: 33px;
 }
 
+/* Effet d'ombrage au survol des cartes populaires */
 .populaires-cards .card:hover {
     box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
 }
 
+/* Style des images des cartes populaires : prennent un tiers de la largeur et arrondis à gauche */
 .populaires-cards img {
     width: 33%;
     height: 136px;
@@ -279,6 +323,7 @@ Nav li:hover {
     border-bottom-left-radius: 20px;
 }
 
+/* Conteneur du texte à droite de l'image : occupe le reste de l'espace (67%) en colonne */
 .populaires-cards .card-content {
     width: 67%;
     padding-left: 15px;
@@ -288,20 +333,27 @@ Nav li:hover {
     box-sizing: border-box;
 }
 
+/* Ajustement des marges pour le titre de la carte */
 .populaires-cards .card-title {
     margin-top: 10px;
     margin-bottom: 4px;
 }
 
+/* Suppression des marges par défaut du sous-titre */
 .populaires-cards .card-subtitle {
     margin: 0;
 }
 
+/* Légère marge en bas pour aligner proprement les étoiles de notation */
 .populaires-cards .card-rating {
     margin-bottom: 5px;
 }
 
-/**************************************************** Activités à Marseille ********/
+/* =====================================================================================================
+   ACTIVITES A MARSEILLE (Activity)
+   ===================================================================================================== */
+
+/* Conteneur global de la section des activités : flexbox avec retour à la ligne et espacement */
 .activity {
     width: 100%;
     display: flex;
@@ -311,11 +363,13 @@ Nav li:hover {
     padding-left: 30px;
 }
 
+/* Titre de la section : prend toute la largeur pour se positionner au-dessus des cartes */
 .activity .activity-title {
     margin-top: 50px;
     width: 100%;
 }
 
+/* Style individuel d'une carte d'activité : largeur fixe, disposition en colonne */
 .activity .card {
     width: 300px;
     display: flex;
@@ -323,10 +377,12 @@ Nav li:hover {
     justify-content: space-between;
 }
 
+/* Effet d'ombrage au survol des cartes d'activités */
 .activity .card:hover {
     box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
 }
 
+/* Style des images des activités : coins arrondis en haut et compensation de la marge du padding de la carte */
 .activity img {
     border-top-left-radius: 20px;
     border-top-right-radius: 20px;
@@ -334,13 +390,17 @@ Nav li:hover {
     height: 400px;
 }
 
+/* Espacement à gauche pour le titre (h3) de l'activité */
 .activity h3 {
     padding-left: 15px;
 }
 
 
+/* =====================================================================================================
+   FOOTER (Footer)
+   ===================================================================================================== */
 
-/**************************************************** Footer ****************/
+/* Conteneur global du footer : fond gris clair, disposition en ligne et espacement */
 .footer {
     background-color: #f2f2f2;
     display: flex;
@@ -349,13 +409,13 @@ Nav li:hover {
     box-sizing: border-box;
 }
 
-/* Alignement et largeur des colonnes */
+/* Alignement et largeur des colonnes du footer */
 .footer-column {
     flex: 1;
     max-width: 30%;
 }
 
-/* Titres (h3) */
+/* Style des titres (h3) dans chaque colonne */
 .footer-column h3 {
     font-size: 18px;
     font-weight: 700;
@@ -363,24 +423,26 @@ Nav li:hover {
     color: #000000;
 }
 
-/* Listes d'éléments */
+/* Réinitialisation des listes du footer (suppression des puces et des marges par défaut) */
 .footer-column ul {
     list-style: none;
     padding: 0;
     margin: 0;
 }
 
+/* Espacement entre chaque élément de la liste */
 .footer-column li {
     margin-bottom: 12px;
 }
 
-/* Liens du footer */
+/* Style des liens à l'intérieur du footer */
 .footer-column a {
     text-decoration: none;
     color: #000000;
     font-size: 16px;
 }
 
+/* Effet au survol des liens du footer : apparition d'un soulignement */
 .footer-column a:hover {
     text-decoration: underline;
 }
@@ -392,17 +454,20 @@ Nav li:hover {
 /************************************************************ Media queries ***********/
 /************************************************************ Medium devices (tablets, less/equal than 1024px) */
 @media (max-width: 1024px) {
+
+    /* Ajustement de la section des filtres pour tablettes */
     .filters {
         display: flex;
         flex-wrap: wrap;
         width: 90%;
     }
 
-    /* Titre filtre par dessus qui prends toute la ligne */
+    /* Le titre des filtres prend toute la largeur au-dessus des boutons */
     .filters .filters-title {
         width: 100%;
     }
 
+    /* Redéfinition du style des filtres */
     .under-filters {
         display: flex;
         align-items: center;
@@ -412,37 +477,45 @@ Nav li:hover {
         border-radius: 30px;
     }
 
+    /* Passage de la section hébergements et populaires en colonne (l'un sous l'autre) */
     .hebergements-and-populaires {
         flex-direction: column;
     }
 
+    /* La section Marseille prend toute la largeur disponible */
     .hebergements-marseille {
         width: 100%;
     }
 
+    /* La section Populaires prend toute la largeur et reçoit un espacement en haut */
     .populaires {
         width: 100%;
         margin-top: 50px;
     }
 
+    /* Disposition horizontale des cartes populaires sur tablette (3 cartes côte à côte) */
     .populaires-cards {
         display: flex;
         flex-direction: row;
         justify-content: space-between;
     }
 
+    /* Chaque lien/carte populaire prend 30% de l'espace */
     .populaires-cards a {
         width: 30%;
     }
 
+    /* Réduction de la taille du titre des cartes populaires pour s'adapter à la tablette */
     .populaires-cards .card-title {
         font-size: 14px;
     }
 
+    /* Réduction de la taille du sous-titre */
     .populaires-cards .card-subtitle {
         font-size: 13px;
     }
 
+    /* Ajustement du conteneur des activités pour tablette */
     .activity {
         width: 100%;
         gap: 10px;
@@ -452,20 +525,24 @@ Nav li:hover {
         padding-left: 0px;
     }
 
+    /* Ajustement du titre des activités sur la gauche */
     .activity .activity-title {
         padding-left: 30px;
     }
 
+    /* Ajustement de la taille des cartes d'activités (plus petites sur tablette) */
     .activity .card {
         display: flex;
         width: 180px;
         height: 320px;
     }
 
+    /* Réduction de la taille du texte des activités */
     .activity h3 {
         font-size: 16px;
     }
 
+    /* Réduction de la hauteur des images d'activités */
     .activity img {
         height: 250px;
     }
@@ -474,6 +551,8 @@ Nav li:hover {
 
 /********************************************************* Small devices (phones, less than 768px) */
 @media (max-width: 767.98px) {
+
+    /* Le conteneur principal prend toute la largeur sans marges ni espacements latéraux */
     .main-container {
         width: 100%;
         max-width: 100%;
@@ -482,30 +561,34 @@ Nav li:hover {
         padding-right: 0;
     }
 
+    /* Ajustement des marges intérieures pour les titres principaux et paragraphes */
     .filters .filters-title,
     header .header-title,
     header p {
         padding-left: 10px;
     }
 
-    Nav {
+    /* Le menu de navigation passe en mode flexible avec retour à la ligne */
+    nav {
         flex-wrap: wrap;
     }
 
-    /* img */
-    Nav div {
+    /* Le conteneur du logo prend toute la largeur et se centre */
+    nav div {
         width: 100%;
         display: flex;
         justify-content: center;
     }
 
-    Nav ul {
+    /* La liste des liens de navigation s'étale sur toute la largeur */
+    nav ul {
         width: 100%;
         padding: 0px;
         gap: 0px;
     }
 
-    Nav li {
+    /* Chaque lien du menu prend 100% de la largeur, avec une bordure en bas au lieu du haut */
+    nav li {
         width: 100%;
         flex: 1;
         text-align: center;
@@ -515,27 +598,28 @@ Nav li:hover {
         transition: 0.2s;
     }
 
-    Nav li:hover {
+    /* Effet au survol sur mobile : bordure active en bas */
+    nav li:hover {
         color: #0065FC;
         border-top: none;
         border-bottom: 2px solid #0065FC;
     }
 
+    /* Barre de recherche recentrée et en pleine largeur */
     .search-bar {
         display: flex;
         justify-content: center;
         align-items: center;
-
         width: 100%;
         box-sizing: border-box;
     }
 
-    /* Masquer le texte "Rechercher" sur mobile */
+    /* Masque le texte "Rechercher" du bouton sur mobile */
     .search-bar .icon-search .icon-complet {
         display: none;
     }
 
-    /* Afficher l'icône loupe sur mobile (elle était masquée dans votre code actuel) */
+    /* Affiche l'icône loupe sous forme de bouton carré stylisé sur mobile */
     .search-bar .icon-search .icon-loop {
         width: 50px;
         height: 50px;
@@ -549,17 +633,19 @@ Nav li:hover {
         box-shadow: 4px 4px 4px 4px rgba(187, 187, 187, 0.5);
     }
 
+    /* Style de l'icône à l'intérieur du bouton loupe mobile */
     .search-bar .icon-search .icon-loop i {
         color: white;
         font-size: 15px;
     }
 
-    /* bouton recherche au survol */
+    /* Effet au survol du bouton loupe mobile */
     .search-bar .icon-search .icon-loop:hover {
         cursor: pointer;
         background-color: #0051c7;
     }
 
+    /* Ajustement des espacements et de la largeur des filtres sur mobile */
     .filters {
         padding: 20px 20px;
     }
@@ -569,29 +655,34 @@ Nav li:hover {
     }
 
 
-    /***** inversion pour les hebergements */
+    /* INVERSION DES SECTIONS : Les hébergements populaires passent au-dessus sur mobile (exigence Booki) */
     .hebergements-and-populaires {
         flex-direction: column-reverse;
     }
 
+    /* Suppression des bordures arrondies des sections globales pour un affichage "plein écran" mobile */
     .hebergements-and-populaires section {
         border-radius: 0px;
     }
 
+    /* Les cartes populaires reviennent à un affichage en bloc standard */
     .populaires-cards {
         display: block;
     }
 
+    /* Les cartes Marseille prennent toute la largeur */
     .card-marseille {
         display: block;
         width: 100%;
         padding-top: 20px;
     }
 
+    /* Fond blanc forcé pour la section des hébergements Marseille sur mobile */
     .hebergements-and-populaires .hebergements-marseille {
         background-color: white;
     }
 
+    /* Ajustement de la hauteur des images des hébergements Marseille */
     .hebergements-marseille img {
         width: 100%;
         height: 110px;
@@ -599,6 +690,7 @@ Nav li:hover {
         border-top-right-radius: 20px;
     }
 
+    /* Section des activités : empilement vertical et centrage des éléments */
     .activity {
         /* Les éléments sont les uns sous les autres */
         flex-direction: column;
@@ -625,7 +717,7 @@ Nav li:hover {
         height: 150px;
     }
 
-
+    /* Footer : empilement des colonnes les unes sous les autres */
     .footer {
         flex-direction: column;
         gap: 30px;
