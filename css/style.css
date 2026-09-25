@@ -175,15 +175,15 @@ nav li:hover {
 .filters {
     width: 800px;
     display: flex;
-    justify-content: space-between;
+    align-items: center;
     flex-wrap: wrap;
     /* Permet aux filtres de passer à la ligne */
-    margin: 15px 15px 15px 0px;
     gap: 15px;
 }
 
 /* Style de chaque bouton / pastille de filtre individuelle */
 .under-filters {
+    height: 50px;
     display: flex;
     align-items: center;
     padding: 0px 20px 0px 20px;
