@@ -67,15 +67,16 @@ nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 15px 0;
-    /* Simplifié de "15px 0px 15px 0px" */
+    margin-top: -9px;
+    margin-bottom: 50px;
 }
 
 
 /* Style et dimensions du logo */
 nav img {
-    width: 100px;
-    height: 30px;
+    margin-top: 30px;
+    width: 90px;
+    height: 27px;
 }
 
 /* Liste des liens de navigation : suppression des puces et espacement horizontal */
@@ -83,11 +84,12 @@ nav ul {
     list-style: none;
     display: flex;
     gap: 30px;
+    margin-top: 0;
 }
 
 /* Style des éléments de la liste (liens du menu) */
 nav li {
-    padding: 10px 15px;
+    padding: 20px 0px 0px 0px;
     border-top: 2px solid transparent;
     transition: 0.2s;
 }
