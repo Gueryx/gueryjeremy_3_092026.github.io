@@ -64,10 +64,14 @@ a {
 
 /* Conteneur principal de la navigation : disposition en ligne, espacée et centrée verticalement */
 nav {
+    /* Active Flexbox */
     display: flex;
+    /* Aligne les éléments sur l'axe principal. */
     justify-content: space-between;
     align-items: center;
+    /* pour qui est aucune marge extérieure en haut */
     margin-top: -9px;
+    /* marge extérieure en bas */
     margin-bottom: 50px;
 }
 
@@ -178,8 +182,6 @@ nav li:hover {
     width: 800px;
     display: flex;
     align-items: center;
-    flex-wrap: wrap;
-    /* Permet aux filtres de passer à la ligne */
     gap: 15px;
 }
 
@@ -223,8 +225,8 @@ nav li:hover {
     margin-right: 15px;
     border: solid 1px #f2f2f2;
     padding: 5px 10px 5px 10px;
-    border-radius: 100px;
     /* Rend la bordure totalement ronde/ovale */
+    border-radius: 100px;
 }
 
 /**************************************************** Hebergements And Populaires ***********/
@@ -413,15 +415,15 @@ nav li:hover {
 .footer {
     background-color: #f2f2f2;
     display: flex;
+    /* Espace égal entre les éléments */
     justify-content: space-between;
     padding: 30px 50px;
-    box-sizing: border-box;
 }
 
 /* Alignement et largeur des colonnes du footer */
 .footer-column {
+    /* Permet de se répartir équitablement */
     flex: 1;
-    max-width: 30%;
 }
 
 /* Style des titres (h3) dans chaque colonne */
