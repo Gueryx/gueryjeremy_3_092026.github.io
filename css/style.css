@@ -121,7 +121,6 @@ nav li:hover {
     justify-content: space-between;
     border-radius: 20px;
     width: 300px;
-    box-sizing: border-box;
 }
 
 /* Bloc de localisation (icône épingle à gauche) */
